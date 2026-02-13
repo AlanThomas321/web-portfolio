@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./Web.css";
+import "./web.css";
 import AboutMe from "../apps/AboutMe.tsx";
 import FutureAI from "../apps/apps.tsx";
 import Contact from "../apps/Contact.tsx";
