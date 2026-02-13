@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./web.css";
 import AboutMe from "../apps/AboutMe.tsx";
 import FutureAI from "../apps/apps.tsx";
