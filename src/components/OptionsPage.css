@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body {
+    font-family: 'VT323', monospace;
+    background-color: black;
+    color: #00ff00;
+    height: 100vh;
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-shadow:
+        0 0 2px #00ff00bd,
+        0 0 5px #00ff00d2,
+        0 0 10px #00ff00a2;
+    overflow-x: hidden;
+}
+
+.heading {
+    text-shadow:
+        0 0 2px #00ff00bd,
+        0 0 5px #00ff00d2,
+        0 0 10px #00ff00a2;
+    font-size: clamp(1rem, 3vw, 1.6rem);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    white-space: pre-wrap;
+    word-break: break-word;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.intro {
+    white-space: pre-line;
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+    max-width: 100%;
+    line-height: 1.4;
+}
+
+.terminal-wrapper {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+    gap: 0.4rem;
+    color: #0f0;
+    white-space: pre-wrap;
+}
+
+.input-label {
+    color: #0ff;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.input-container {
+    position: relative;
+    display: inline-block;
+    width: fit-content;
+}
+
+.terminal-input-field {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #0f0;
+    font-size: inherit;
+    font-family: 'VT323', monospace;
+    width: auto;
+    caret-color: transparent;
+}
+
+.cursor {
+    position: absolute;
+    top: 4px;
+    right: 190px;
+    animation: blink 1s step-end infinite;
+    color: #0f0;
+    font-size: 1.2rem;
+    pointer-events: none;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+.terminal-output {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: clamp(1rem, 2.5vw, 1.4rem);
+    word-break: break-word;
+    max-width: 100%;
+}
+
+.line3 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* 📱 Mobile responsiveness */
+@media (max-width: 600px) {
+    .body {
+        padding: 0.8rem;
+    }
+
+    .heading {
+        font-size: clamp(0.9rem, 4.5vw, 1.2rem);
+    }
+
+    .terminal-wrapper {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .terminal-input-field {
+        width: 100%;
+        min-width: 100px;
+    }
+
+    .cursor {
+        width: 8px;
+        right: -6px;
+    }
+}
